@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exploring the Rise of AI</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f0f8ff, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    header {
+      background-color: #001f3f;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 70px;
+      color: #00e6ac;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #000;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 2px 2px 4px #000, 0 0 5px #00e6ac;
+      }
+      to {
+        text-shadow: 2px 2px 6px #000, 0 0 20px #00ffcc;
+      }
+    }
+
+    header p {
+      font-size: 20px;
+      color: #ffffff;
+      margin: 0 0 10px;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.4s; }
+    section:nth-child(4) { animation-delay: 0.6s; }
+    section:nth-child(5) { animation-delay: 0.8s; }
+    section:nth-child(6) { animation-delay: 1s; }
+    section:nth-child(7) { animation-delay: 1.2s; }
+    section:nth-child(8) { animation-delay: 1.4s; }
+    section:nth-child(9) { animation-delay: 1.6s; }
+    section:nth-child(10) { animation-delay: 1.8s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2, h3 {
+      color: #003366;
+      border-bottom: 2px solid #00cccc;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    button {
+      padding: 10px 18px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005580;
+      transform: scale(1.05);
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+
+    iframe, img, canvas, audio {
+      display: block;
+      margin-top: 15px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    #feedback {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Exploring the Rise of AI</h1>
+    <p>Global Innovation & Canada's Leadership in the Age of AI</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>What is Artificial Intelligence?</h2>
+      <p>Artificial Intelligence (AI) refers to computer systems that can perform tasks that usually require human intelligence, such as learning, reasoning, and problem-solving.</p>
+    </section>
+
+    <section>
+      <h2>Global Trends in AI</h2>
+      <p>AI is transforming industries worldwide. Here are some of the top trends:</p>
+      <ul id="globalTrends"></ul>
+    </section>
+
+    <section>
+      <h2>Canada's Leadership in AI</h2>
+      <p>Canada is one of the top countries investing in ethical and innovative AI. Here are some major Canadian developments:</p>
+      <ul id="canadaTrends"></ul>
+      <button onclick="showTrends()">Load AI Trends</button>
+    </section>
+
+    <section>
+      <h2>AI in Everyday Life</h2>
+      <p>From voice assistants like Siri and Alexa to smart cars and personalized recommendations, AI is part of our daily lives.</p>
+      <img height="200px" src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/443f1031-a270-4ee8-a60f-e9bbadf5184e/dc395eb4-d068-4670-9cf5-44a586427e6b.png">
+      <small>Image Source: Google (Free to use)</small>
+    </section>
+
+    <section>
+      <h2>Benefits vs. Risks of AI</h2>
+      <p>Is AI good or bad? Share your opinion below:</p>
+      <input type="text" id="userOpinion" placeholder="Type 'positive' or 'negative'" />
+      <button onclick="checkOpinion()">Submit</button>
+      <p id="feedback"></p>
+    </section>
+
+    <section>
+      <h2>Watch This AI Video</h2>
+      <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" width="560" height="315" title="AI Video" allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2>Listen to AI-Themed Music</h2>
+      <audio controls>
+        <source src="https://www.bensound.com/bensound-music/bensound-scifi.mp3" type="audio/mp3">
+      </audio>
+    </section>
+
+    <section>
+      <h2>Bonus Animation (AI Robot GIF)</h2>
+      <iframe src="https://giphy.com/embed/QNFhOolVeCzPQ2Mx85" width="480" height="270" allowfullscreen title="AI Animation"></iframe>
+    </section>
+
+    <section>
+      <h2>AI Canvas Drawing</h2>
+      <canvas id="myCanvas" width="300" height="150" style="border:1px solid #003366;"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Tushar Manjhu and Mehakjot Kaur | CPSC 101 Project | © 2025</p>
+  </footer>
+
+  <script>
+    const global = ["AI in healthcare", "AI in finance", "Generative AI", "Robotics", "Self-driving technology"];
+    const canada = ["Toronto is a global AI hub", "Mila research institute in Montreal", "Government funding for ethical AI"];
+
+    function showTrends() {
+      const gList = document.getElementById("globalTrends");
+      const cList = document.getElementById("canadaTrends");
+
+      gList.innerHTML = "";
+      cList.innerHTML = "";
+
+      global.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        gList.appendChild(li);
+      });
+
+      canada.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        cList.appendChild(li);
+      });
+    }
+
+    function checkOpinion() {
+      const value = document.getElementById("userOpinion").value.trim().toLowerCase();
+      const feedback = document.getElementById("feedback");
+
+      if (value.includes("positive")) {
+        feedback.textContent = "Thank you! AI has many benefits like saving lives and boosting productivity.";
+        feedback.style.color = "green";
+      } else if (value.includes("negative")) {
+        feedback.textContent = "Thanks for your opinion. AI does pose risks like job loss and bias.";
+        feedback.style.color = "red";
+      } else {
+        feedback.textContent = "Interesting view. AI affects people in different ways!";
+        feedback.style.color = "blue";
+      }
+    }
+
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#0099cc";
+    ctx.fillRect(30, 30, 100, 50);
+    ctx.strokeStyle = "#003366";
+    ctx.lineWidth = 4;
+    ctx.strokeRect(30, 30, 100, 50);
+    ctx.beginPath();
+    ctx.arc(200, 75, 30, 0, 2 * Math.PI);
+    ctx.fillStyle = "#ff6600";
+    ctx.fill();
+    ctx.stroke();
+  </script>
+</body>
+</html>
